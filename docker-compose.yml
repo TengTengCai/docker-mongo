@@ -22,3 +22,5 @@ services:
     environment:
       ME_CONFIG_MONGODB_ADMINUSERNAME: root
       ME_CONFIG_MONGODB_ADMINPASSWORD: root
+      ME_CONFIG_BASICAUTH_USERNAME: tianjun
+      ME_CONFIG_BASICAUTH_PASSWORD: tianjun223.
