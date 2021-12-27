@@ -10,7 +10,7 @@ services:
       - 27017:27017
     environment:
       MONGO_INITDB_ROOT_USERNAME: tianjun
-      MONGO_INITDB_ROOT_PASSWORD: 1qaz@WSX
+      MONGO_INITDB_ROOT_PASSWORD: 1qaz2WSX
 
   mongo-express:
     image: mongo-express
@@ -18,8 +18,11 @@ services:
     ports:
       - 8088:8081
     environment:
+      ME_CONFIG_BASICAUTH_USERNAME: tianjun
+      ME_CONFIG_BASICAUTH_PASSWORD: 1qaz2WSX
+      ME_CONFIG_MONGODB_ENABLE_ADMIN: 'true'
       ME_CONFIG_MONGODB_ADMINUSERNAME: tianjun
-      ME_CONFIG_MONGODB_ADMINPASSWORD: 1qaz@WSX
-      ME_CONFIG_MONGODB_URL: mongodb://tianjun:1qaz@WSX@mongo:27017/
-      ME_CONFIG_BASICAUTH_USERNAME: root
-      ME_CONFIG_BASICAUTH_PASSWORD: 1qaz@WSX
+      ME_CONFIG_MONGODB_ADMINPASSWORD: 1qaz2WSX
+      ME_CONFIG_MONGODB_PORT: 27017
+      ME_CONFIG_MONGODB_SERVER: mongo
+      
